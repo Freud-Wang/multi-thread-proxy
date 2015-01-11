@@ -82,7 +82,10 @@ public class EchoServer {
 					 * the server reads the message and directly writes back to client(i.e. echo)
 					 */
 					in.read(buff);
-					out.write(buff);
+					String body = "<html><body><h1>Hello World!</h1></body></html>";
+					out.write(getOKHeader(body.length()).getBytes());
+					out.write(body.getBytes());
+					
 				}
 				/*
 				 * When you finish echoing all message from client, you should release all those following
@@ -95,6 +98,12 @@ public class EchoServer {
 				logger.warning("IOException caught: " + e.getMessage());
 			} 
 		}
+	}
+	
+	private String getOKHeader(int length) {
+		return String.format("HTTP/1.1 200 OK\r\nContent-Type: "
+				+ "text/html; charset=utf-8\r\nContent-Length: "
+				+ "%d\r\n\r\n", length);
 	}
 	
 	public static void main(String[] args) {
