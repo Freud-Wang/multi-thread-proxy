@@ -1,0 +1,7 @@
+这是一个标准的Eclipse的Project，你可以直接导入，然后Run EchoServer class。我在代码里给了一些必要的comment，希望能帮助你理解其中的机制。如有不详尽的地方，直接问我哈。
+
+这个Server的端口号是14740。你在Linux下可以通过curl命令来测试：
+$ curl "localhost:14740"
+
+你也可以通过Chrome浏览器，在地址栏填入：localhost:14740
+你应该可以有一个download的文档，里面是Chrome向Server发出的HTTP Request。
