@@ -7,3 +7,4 @@ bin
 
 #Ignore .prject
 .project
+/.DS_Store
