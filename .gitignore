@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 #igonre /bin
 bin
-=======
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -12,6 +10,5 @@ bin
 *.war
 *.ear
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
->>>>>>> 68f7c2d9154d4981ae307f5d0655b028fab5ab68
+#Ignore .prject
+.project
