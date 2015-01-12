@@ -87,6 +87,11 @@ public class EchoServer {
 					out.write(body.getBytes());
 					
 				}
+				
+				String body = "<html><body><h1>Hello World!</h1></body></html>";
+				out.write(getOKHeader(body.length()).getBytes());
+				out.write(body.getBytes());
+				
 				/*
 				 * When you finish echoing all message from client, you should release all those following
 				 * resources in order to avoid memory leaks.
