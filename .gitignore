@@ -6,5 +6,4 @@ bin
 .mtj.tmp/
 
 #Ignore .prject
-.project
 /.DS_Store
