@@ -28,12 +28,21 @@ public class Client {
 			BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 			out.write(request.getBytes());
 			String line;
+			boolean hdrEnd = false;
 			while(true) {
 				line = in.readLine();
 				if (line == null) {
 					break;
 				}
 				fout.write(line);
+				if (!hdrEnd) {
+					fout.write("\r\n");
+				}
+				if (line.equals("")) {
+					hdrEnd = true;
+				}
+				
+				
 				
 			}
 			out.close();
